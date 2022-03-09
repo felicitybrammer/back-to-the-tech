@@ -1,0 +1,21 @@
+{
+  "name": "back-to-the-tech",
+  "version": "1.0.0",
+  "description": "A blog site about technology topics",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felicitybrammer/back-to-the-tech.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felicitybrammer/back-to-the-tech/issues"
+  },
+  "homepage": "https://github.com/felicitybrammer/back-to-the-tech#readme"
+}
