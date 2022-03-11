@@ -5,18 +5,6 @@ const { User, Post, Vote, Comment } = require('../../models');
 router.get('/', (req, res) => {
     User.findAll({
         attributes: { exclude: ['password' ] },
-        include: [
-            {
-              model: Post,
-              attributes: ['id', 'title', 'post_url', 'created_at']
-            },
-            {
-              model: Post,
-              attributes: ['title'],
-              through: Vote,
-              as: 'voted_posts'
-            }
-          ]
     })
         .then(dbUserData => res.json(dbUserData))
         .catch(err => {
@@ -103,7 +91,7 @@ router.post('/login', (req, res) => {
 
         const validPassword = dbUserData.checkPassword(req.body.password);
         if (!validPassword) {
-            res.status(400).json({ message: 'Incorrect password' });
+            res.status(400).json({ message: 'Incorrect credentials' });
             return;
         }
 
