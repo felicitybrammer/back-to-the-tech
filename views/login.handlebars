@@ -1,34 +1,49 @@
-<form class="login-form">
-  <div>
-    <label for="email-login">email:</label>
-    <input type="text" id="email-login" />
-  </div>
-  <div>
-    <label for="password-login">password:</label>
-    <input type="password" id="password-login" />
-  </div>
-  <div>
-    <button type="submit">login</button>
-  </div>
-</form>
+<div id='main' class='mx-20 my-20 flex flex-row justify-center w-auto'>
+  <form class="login-form w-1/3 rounded-md border bg-slate-50 shadow-sm flex flex-col p-5 mb-8 h-fit mr-20">
+    <h3 class="font-mono text-xl font-semibold text-slate-700">LOGIN</h3>
+    <div class="mb-2">
+      <label for="email-login" class='font-mono text-sm font-medium text-slate-400'>email:</label>
+      <input type="text" id="email-login" placeholder='Enter your email...'
+        class='placeholder:italic placeholder:text-slate-300 block w-full border border-slate-400 rounded-md py-2 pl-4 focus:outline-none focus:ring-emerald-300 focus:ring-2 focus:border-none' />
+    </div>
+    <div class='mb-2'>
+      <label for="password-login" class='font-mono text-sm font-medium text-slate-400'>password:</label>
+      <input type="password" id="password-login" placeholder='Enter your password...'
+        class='placeholder:italic placeholder:text-slate-300 block w-full border border-slate-400 rounded-md py-2 px-3 focus:outline-none focus:ring-emerald-300 focus:ring-2 focus:border-none' />
+    </div>
+    <div>
+      <button type="submit"
+        class="font-mono font-normal text-slate-600 bg-emerald-300 rounded py-2 px-2 hover:bg-emerald-400">login</button>
+    </div>
+  </form>
 
-<form class="signup-form">
-  <div>
-    <label for="username-signup">username:</label>
-    <input type="text" id="username-signup" />
-  </div>
-  <div>
-    <label for="email-signup">email:</label>
-    <input type="text" id="email-signup" />
-  </div>
-  <div>
-    <label for="password-signup">password:</label>
-    <input type="password" id="password-signup" />
-  </div>
-  <div>
-    <button type="submit">signup</button>
-  </div>
-</form>
+  <form class="signup-form w-1/3 rounded-md border bg-slate-50 shadow-sm flex flex-col p-5 mb-8 h-fit mr-20">
+    <h3 class="font-mono text-xl font-semibold text-slate-700">SIGN UP</h3>
+    <div class='mb-2'>
+      <label for="username-signup" class='font-mono text-sm font-medium text-slate-400'>username:</label>
+      <input type="text" id="username-signup" placeholder='Enter a username...'
+        class='placeholder:italic placeholder:text-slate-300 block w-full border border-slate-400 rounded-md py-2 px-3 focus:outline-none focus:ring-emerald-300 focus:ring-2 focus:border-none' />
+    </div>
+    <div class='mb-2'>
+      <label for="email-signup" class='font-mono text-sm font-medium text-slate-400'>email:</label>
+      <input type="text" id="email-signup" placeholder='Enter your email...'
+        class='placeholder:italic placeholder:text-slate-300 block w-full border border-slate-400 rounded-md py-2 px-3 focus:outline-none focus:ring-emerald-300 focus:ring-2 focus:border-none' />
+    </div>
+    <div class='mb-2'>
+      <label for="password-signup" class='font-mono text-sm font-medium text-slate-400'>password:</label>
+      <input type="password" id="password-signup" placeholder='Enter a password...'
+        class='placeholder:italic placeholder:text-slate-300 block w-full border border-slate-400 rounded-md py-2 px-3 focus:outline-none focus:ring-emerald-300 focus:ring-2 focus:border-none' />
+      <div id='check-length' class='flex flex-row justify-start mt-1'>
+        <p class='font-mono text-xs font-normal text-emerald-300 pt-1 pr-1'>Password must be 6 characters</p>
+      </div>
+    </div>
+    <div>
+      <button type="submit" class="font-mono font-normal text-slate-600 bg-emerald-300 rounded py-2 pl-4 hover:bg-emerald-400">signup</button>
+    </div>
+  </form>
+
+</div>
 
 <script src="/javascript/login.js"></script>
-{{!-- <script src="/javascript/logout.js"></script> --}}
+{{!--
+<script src="/javascript/logout.js"></script> --}}

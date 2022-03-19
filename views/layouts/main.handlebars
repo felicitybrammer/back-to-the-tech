@@ -8,25 +8,27 @@
     <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
-<body>
+<body class="bg-slate-100 h-screen">
     <div class="wrapper">
-        <header>
-            <h1>
+        <header class="bg-slate-600 sticky top-0">
+            <div class="flex flex-row justify-between px-8 py-6">
+            <h1 class="font-mono text-2xl font-semibold text-emerald-300">
                 <a href="/">Back To The Tech</a>
             </h1>
             <nav>
                 {{#if loggedIn}}
                 
-                <button id="logout" class="btn-no-style">logout</button>
+                <button id="logout" >logout</button>
                 {{else}}
-                <a href="/login">login</a>
+                <a href="/login" class="font-mono font-normal text-slate-600 bg-emerald-300 rounded py-2 px-2">login</a>
                 {{/if}}
             </nav>
+            </div>
         </header>
         <main>
             {{{ body }}}
         </main>
-        <footer>
+        <footer class="flex justify-center border-2 border-t-slate-200 bottom-0 font-mono text-slate-400 text-base py-3">
             Thanks for visiting!
         </footer>
     </div>
