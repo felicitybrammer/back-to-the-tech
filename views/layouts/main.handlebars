@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back To The Tech</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body class="bg-slate-100 h-screen">
+    <div class="wrapper">
+        <header class="bg-slate-600 sticky top-0">
+            <div class="flex flex-row justify-between px-8 py-6">
+            <h1 class="font-mono text-2xl font-semibold text-emerald-300">
+                <a href="/">Back To The Tech</a>
+            </h1>
+            <nav>
+                {{#if loggedIn}}
+                
+                <button id="logout" >logout</button>
+
+                {{else}}
+                <a href="/login" class="font-mono font-normal text-slate-600 bg-emerald-300 rounded py-2 px-2">login</a>
+                
+                {{/if}}
+            </nav>
+            </div>
+        </header>
+        <main>
+            {{{ body }}}
+        </main>
+        <footer class="flex justify-center border-2 border-t-slate-200 bottom-0 font-mono text-slate-400 text-base py-3">
+            Thanks for visiting!
+        </footer>
+    </div>
+
+
+{{#if loggedIn}}
+<script src="/javascript/logout.js"></script>
+{{/if}}
+
+</body>
+</html>

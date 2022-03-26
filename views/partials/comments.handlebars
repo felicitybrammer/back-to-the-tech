@@ -1,0 +1,14 @@
+<div class="comments ">
+  {{#each this}}
+  <section class="comment rounded border bg-slate-100 shadow-sm flex flex-col p-5 mb-2">
+    <div class="meta flex flex-row justify-between pb-3">
+      {{user.username}} on {{format_date created_at}}
+      <p class="font-mono text-sm text-slate-700 italic">by {{user.username}}</p>
+      <p class="font-mono text-sm text-slate-700 italic">{{created_at}}</p>
+    </div>
+    <div class="text font-mono text-base text-slate-700">
+      {{comment_text}}
+    </div>
+  </section>
+  {{/each}}
+</div>
