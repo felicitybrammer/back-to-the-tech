@@ -17,8 +17,9 @@ const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 require('dotenv').config();
 const sess = {
-  secret: process.env.SECRET,
-  cookie: {sameSite: 'strict'},
+  // secret: process.env.SECRET,
+  secret: 'secret',
+  cookie: {},
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
