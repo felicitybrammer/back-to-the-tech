@@ -1,0 +1,41 @@
+<article class='mx-20 ml-20'>
+  <a href="/dashboard"> &larr; Back to dashboard</a>
+  <h2 class="font-mono text-2xl text-emerald-400 font-bold">
+    Edit Post
+  </h2>
+  <form class="edit-post-form rounded-md border bg-slate-50 shadow-sm flex flex-col p-5 my-8">
+    <div class='mb-2'>
+      <label for="post-title" class="font-mono text-sm font-medium text-slate-400">Title:</label>
+      <input name="post-title" type="text" value="{{post.title}}"
+        class='placeholder:italic placeholder:text-slate-300 block w-full border border-slate-400 rounded-md py-2 px-3 focus:outline-none focus:ring-emerald-300 focus:ring-2 focus:border-none' />
+      <span>({{format_url post.post_url}})</span>
+    </div>
+    <div class='mb-2'>
+      {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}}
+      |
+      <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+      <textarea name="post-body" rows="6" col="100"
+        class='placeholder:italic placeholder:text-slate-300 block w-full border border-slate-400 rounded-md py-2 px-3 focus:outline-none focus:ring-emerald-300 focus:ring-2 focus:border-none'>{{post.post_body}}</textarea>
+    </div>
+    <div class='flex flex-row justify-between'>
+      <button type="submit" class="w-1/6 font-mono font-normal text-slate-600 bg-emerald-300 rounded py-2 pl-4 hover:bg-emerald-400">Save post</button>
+      <button type="button" class="delete-post-btn class="w-1/6 font-mono font-normal text-slate-100 bg-rose-600 rounded py-2 pl-4 hover:bg-rose-800"">Delete post</button>
+    </div>
+  </form>
+</article>
+
+<form class="comment-form">
+  <div>
+    <textarea name="comment-body"></textarea>
+  </div>
+
+  <div>
+    <button type="submit">add comment</button>
+  </div>
+</form>
+
+{{> comments post.comments}}
+
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
+<script src="/javascript/comment.js"></script>
